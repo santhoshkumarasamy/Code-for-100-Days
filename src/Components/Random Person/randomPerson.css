@@ -74,6 +74,16 @@
   animation-name: rotateIcon;
   animation-duration: 2s;
 }
+.topPortion {
+  height: 50%;
+  width: 100%;
+  background-color: #af9f9f;
+}
+.bottomPortion {
+  height: 50%;
+  width: 100%;
+  background-color: black;
+}
 @keyframes rotateIcon {
   0% {
     border-top: 1px solid black;

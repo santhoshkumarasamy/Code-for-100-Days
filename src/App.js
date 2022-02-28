@@ -6,8 +6,8 @@ import Random from './Components/Random Person/Random'
 function App() {
   return (
     <div className="App">
-     <BirthdayRemainder />
-     <FindTours />
+     {/* <BirthdayRemainder /> */}
+     {/* <FindTours /> */}
      <Random />
      <Footer />
     </div>

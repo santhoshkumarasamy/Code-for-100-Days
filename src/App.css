@@ -1,16 +1,7 @@
 *{
   margin: 0;
 }
-.topPortion {
-  height: 50%;
-  width: 100%;
-  background-color: #af9f9f;
-}
-.bottomPortion {
-  height: 50%;
-  width: 100%;
-  background-color: black;
-}
+
 .App {
   position: absolute;
   height: 100%;
