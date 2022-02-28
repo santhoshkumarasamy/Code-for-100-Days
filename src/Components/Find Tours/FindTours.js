@@ -46,7 +46,7 @@ class FindTours extends Component {
               <div key={index} className="tour">
                 <img
                   className="tourImg"
-                  src={"images/" + tour.img}
+                  src={"images/tour/" + tour.img}
                   alt={tour.title}
                 />
                 <div className="tourTitle">
