@@ -1,0 +1,78 @@
+.findTours {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  text-align: center;
+}
+.title {
+  padding: 12px 150px;
+  text-align: center;
+  margin: 50px auto 0 auto;
+  border-bottom: 5px dashed black;
+}
+.tour {
+  border-radius: 12px;
+  box-shadow: 0 0 10px grey;
+  margin: 30px auto;
+  width: 540px;
+}
+.tour:hover{
+    box-shadow: 0 0 20px grey;
+    /* box-sizing: border-box; */
+}
+.tourTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.tourTitle h3 {
+  margin: 20px 12px;
+}
+.tourInfo {
+  padding: 0px 12px;
+}
+.price {
+  margin: 20px 15px;
+  background-color: rgb(39 146 245);
+  color: white;
+  padding: 2px 2px;
+  border-radius: 4px;
+}
+.tourImg {
+  width: inherit;
+  border-radius: 12px 12px 0 0;
+  cursor: pointer;
+}
+
+.removeBtn {
+  margin: 12px 0px;
+  width: 250px;
+  height: 30px;
+  font-size: 17px;
+  background-color: white;
+  box-shadow: 0 0 3px rgb(236, 149, 149);
+  color: red;
+  border: 0px;
+  border-radius: 12px;
+}
+
+.removeBtn:hover {
+  cursor: pointer;
+  border: 1px solid red;
+  background-color: red;
+  color: white;
+}
+.lessBtn {
+  border: 0px;
+  background: rgb(136 194 237);
+  padding: 3px;
+  border-radius: 5px;
+}
+@media screen and (max-width: 600px) {
+  .tour {
+    width: 90vw !important;
+  }
+  .title {
+    padding: 12px 20vw !important;
+  }
+}

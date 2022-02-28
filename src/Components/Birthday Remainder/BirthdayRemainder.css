@@ -1,0 +1,82 @@
+.mainBody {
+  background-color:#ADEFD1FF;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+    justify-content: center;
+}
+:root{
+    --name-font:20px;
+    --date-font:15px;
+    --font-family:"Sofia", sans-serif;
+}
+*{
+    font-family: var(--font-family);
+}
+.birthdayBox {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 400px;
+  min-height: 100px;
+  width: auto;
+  height: auto;
+  overflow: auto;
+  background-color: white;
+  box-shadow: 0 0 20px grey;
+  border-radius: 10px;
+  padding: 10px;
+}
+.noOfBirthDays {
+    font-size: 25px;
+    margin: 10px 40px;
+}
+
+.birthdays {
+  display: grid;
+  grid-template-areas: "img details";
+  grid-template-columns: 100px 300px;
+  padding: 10px;
+  /* margin: 10px; */
+}
+.birthdayImage img {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  grid-area: img;
+}
+.birthdayDetails {
+    grid-area: details;
+    margin: auto 40px;
+
+}
+.birthdayName {
+    font-size: var(--name-font);
+}
+.birthdayDate {
+    font-size: var(--date-font);
+}
+.clearBirthDay {
+    text-align: center;
+    width: 300px;
+    height: 40px;
+    font-size: var(--name-font);
+    border: 1px solid black;
+    border-radius: 9px;
+    background-color: #00203FFF;
+    color: white;
+}
+.clearBirthDay:hover{
+    box-shadow: 0 0 10px #00203FFF;
+    font-size: 23px ;
+}
+.clearButton{
+    margin: 10px auto;
+    text-align: center;
+}
+.birthdays:hover{
+    box-shadow: 0 0 5px rgb(165, 165, 165);
+    border-radius: 30px;
+
+}

@@ -1,0 +1,108 @@
+.randomBody {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 500px;
+  min-height: 300px;
+  background-color: white;
+  flex-wrap: wrap;
+  border-radius: 20px;
+}
+.person {
+  position: relative;
+  height: 40%;
+  width: 100%;
+  /* background-color: aliceblue; */
+  flex-basis: 200px;
+  border-bottom: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 20px 20px 0 0;
+}
+.person img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  align-self: center;
+}
+.personDetail {
+  text-align: center;
+}
+.personDetails {
+  position: relative;
+  height: 50%;
+  width: 100%;
+  flex-basis: 80px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.detail {
+  justify-self: center;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  font-size: 25px;
+  padding: 15px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.newPerson {
+  position: relative;
+  height: 10%;
+  width: 100%;
+  flex-basis: 50px;
+  text-align: center;
+}
+.newPerson button {
+  border-radius: 5px;
+  border: 0px;
+  width: 250px;
+  height: 30px;
+  cursor: pointer;
+  background: #7395ae;
+  color: white;
+}
+.newPerson button:hover {
+  box-shadow: 1px 0 5px grey;
+}
+.detail:hover {
+  animation-name: rotateIcon;
+  animation-duration: 2s;
+}
+@keyframes rotateIcon {
+  0% {
+    border-top: 1px solid black;
+  }
+  25% {
+    transform: rotate(180deg);
+    border-right: 1px solid black;
+  }
+  50% {
+    /* transform: rotate(180deg); */
+    border-bottom: 1px solid black;
+  }
+  75% {
+    transform: rotate(-180deg);
+    border-left: 1px solid black;
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .randomBody {
+    /* width: 300px !important; */
+    min-width: 300px;
+  }
+  .newPerson button {
+    width: 80%;
+    margin: 10px;
+    width: 200px;
+  }
+}

@@ -1,0 +1,17 @@
+.footer{
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    width: 100vw;
+    text-align: center;
+
+}
+.contact img{
+    height: 20px;
+    margin: 5px 5px;
+}
+a{
+    display: flex;
+    justify-content: center;
+    color: black;
+}
