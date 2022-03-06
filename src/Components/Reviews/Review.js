@@ -30,7 +30,10 @@ export default function Review() {
             <div className='underline'></div>
           </div>
           <div className='reviewBox'>
-            <img src={"images/review/"+review.img} alt={review.name} /> 
+            <div id="imgDiv">
+              <img src={"images/review/"+review.img} alt={review.name} /> 
+            </div>
+            
             <h3>{review.name}</h3>
             <h5>{review.role}</h5>
             <p align="center">{review.review}</p>

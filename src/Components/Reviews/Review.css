@@ -1,92 +1,124 @@
-.reviewBody{
-    display: grid;
-    place-items : center;
-    min-height: 100vh;
-    background-color:#f1f5f8;
-    font-family: 'Dancing Script', cursive !important;
+.reviewBody {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: #f1f5f8;
+  font-family: "Dancing Script", cursive !important;
 }
-.review{
-    display: flex;
-    flex-direction: column;
-    width: 600px;
-    justify-content: space-around;
+.review {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  justify-content: space-around;
 }
-.reviewTitle{
-    margin: 30px;
-    text-align: center;
-    font-size: 35px;
+.reviewTitle {
+  margin: 30px;
+  text-align: center;
+  font-size: 35px;
 }
-.underline{
-    border-bottom: 2px dashed black;
-    width: 300px;
-    margin: 12px auto auto auto;
+.underline {
+  border-bottom: 2px dashed black;
+  width: 300px;
+  margin: 12px auto auto auto;
 }
-.reviewBox{
-    min-height: 350px;
-    display: flex;
-    flex-direction: column;
-    padding: 12px;
-    border-radius: 12px;
-    box-shadow: 0 0 10px grey;
-    /* justify-content: space-around; */
-    align-items: center;
-    background-color: white;
+.reviewBox {
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px grey;
+  /* justify-content: space-around; */
+  align-items: center;
+  background-color: white;
 }
-.reviewBox img{
-    height: 150px;
-    width: 145px;
-    border-radius: 50%;
-    box-shadow: 7px -3px 0px #4aa6e9;
+.reviewBox img {
+  height: 150px;
+  width: 145px;
+  border-radius: 50%;
+  position: absolute;
+  /* box-shadow: 7px -3px 0px #4aa6e9; */
 }
-.reviewBox img::before{
-    content: "";
+
+.reviewBox h3 {
+  margin: 5px;
 }
-.reviewBox h3{
-    margin: 5px;
+.reviewBox h5 {
+  color: #4ba6e9;
+  font-size: 18px;
 }
-.reviewBox h5{
-    color: #4ba6e9;
-    font-size: 18px;
+.reviewBox p {
+  margin: 10px 0px;
 }
-.reviewBox p{
-    margin: 10px 0px;
+.toggle {
+  margin: 15px;
 }
-.toggle{
-margin: 15px;
-}
-button{
-    border: 0;
-    color: #4ba6e9; 
-    font-size: 15px;
+button {
+  border: 0;
+  color: #4ba6e9;
+  font-size: 15px;
 }
 .toggle button {
-    
-    background: white;
-    
-    
+  background: white;
 }
-.toggleLeft{
 
+.sur-btn {
+  border-radius: 3px;
+  cursor: pointer;
 }
-.toggleRight{
-    
+.sur-btn:hover {
+  background-color: #0589e9;
+  color: white;
 }
-.sur-btn{
-   
-    border-radius: 3px;
-    cursor: pointer;
+@media screen and (max-width: 600px) {
+  .review {
+    width: 80vw;
+  }
+  #imgDiv {
+    height: 25vw;
+    width: 25vw;
+  }
 }
-.sur-btn:hover{
-    background-color: #0589e9;
-    color: white;
+#imgDiv{
+  height: 150px;
+  width: 145px;
+  position: relative;
+ 
 }
-@media screen and (max-width:600px) {
-    .review{
-        width: 80vw;
-    }
-    .reviewBox img{
-        height: 25vw;
-        width: 25vw;
-    }
-    
+#imgDiv::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: #4aa6e9;
+  top: -0.25rem;
+  right: -0.5rem;
+  position: absolute;
+  border-radius: 50%;
+ 
+}
+
+/* #imgDiv::before:hover {
+  border-radius: 50%;
+  animation: borderrotating 2s infinite;
+} */
+@keyframes borderrotating {
+  0% {
+    top: -0.25em;
+    right: -0.5rem;
+  }
+  25% {
+    top: 0;
+    left:0.5rem;
+  }
+  50%{
+    top: 0.50em;
+    bottom:0.25rem;
+  }
+  75%{
+    bottom: -0.50em;
+    left:0.25rem;
+  }
+  100%{
+    left:-0.5rem;
+  }
 }
