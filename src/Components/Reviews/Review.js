@@ -1,4 +1,5 @@
 import React,{useEffect,useState} from 'react'
+import {MdOutlineArrowForwardIos,MdOutlineArrowBackIos} from 'react-icons/md'
 import { defReviews } from './Reviews';
 import './Review.css'
 export default function Review() {
@@ -10,6 +11,12 @@ export default function Review() {
         // console.log(r);
         setReviewId(r)
         // console.log((Math.random()*10).toFixed() >= 5 ? 5-(Math.random()*10).toFixed() : (Math.random()*10).toFixed());
+    }
+    const goNext = ()=>{
+      setReviewId(previd=> previd+1)
+    }
+    const goPre = ()=>{
+      setReviewId(previd=> previd-1)
     }
     useEffect(()=>{
         setReview(defReviews[reviewId])
@@ -27,7 +34,11 @@ export default function Review() {
             <h3>{review.name}</h3>
             <h5>{review.role}</h5>
             <p align="center">{review.review}</p>
-            <button onClick={getRandom}>Get Random Number</button>
+            <div className='toggle'>
+              <button className='toggleLeft' onClick={goPre} disabled={reviewId < 1 ? true : false  }><MdOutlineArrowBackIos /></button>
+              <button className='toggleRight' onClick={goNext} disabled={reviewId+1 == defReviews.length ?true: false }><MdOutlineArrowForwardIos/></button>
+            </div>
+            <button className='sur-btn' onClick={getRandom}>Surprise Me</button>
           </div>
           
         </div>
